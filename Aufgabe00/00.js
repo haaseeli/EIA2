@@ -3,5 +3,5 @@ function Eingabefeld() {
     if (eingabe != null) {
         document.getElementById("Type").innerHTML =
             "Merci goku, " + eingabe + ".";
-    }
-}
+    } // if close
+} // function close
