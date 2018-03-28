@@ -1,7 +1,6 @@
-// function popup eingabe
-
+// Pop Up Eingabefeld
 function Eingabefeld() {
-    var eingabe = prompt("Name", "");
+    var eingabe = prompt("Name", ""); // Typ Annotiation var eingabe
     if (eingabe != null) {
         document.getElementById("Type").innerHTML =
             "Merci goku, " + eingabe + ".";
