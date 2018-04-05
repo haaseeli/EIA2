@@ -6,3 +6,4 @@ function Eingabefeld() {
             "Merci goku, " + eingabe + ".";
     } // if close
 } // function close
+//# sourceMappingURL=00.js.map
