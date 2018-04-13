@@ -1,0 +1,95 @@
+/**
+		Aufgabe: (Aufgabe 3)
+		Name: (Elisabeth Haase)
+		Matrikel: (256436)
+		Datum: (13.04.2018)
+		Hiermit versichere ich, dass ich diesen
+		Code selbst geschrieben habe. Er wurde
+		nicht kopiert und auch nicht diktiert.
+		**/
+		
+
+		header {
+		
+		position: fixed;
+		right: 0;
+		top: 0;
+		left: 0;
+		padding: 1em;
+		background-color: #ffffff;
+		font-size: 0.9em;
+		text-align: center;
+		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+		
+		}
+		
+		body {
+		  
+		background-color: #eeeeee;
+		position: relative;
+		margin-top: 5em;
+		margin-bottom: 5em;
+		padding-bottom: 6em;
+		min-height: 100%;
+		font-family: Arial, sans-serif;
+		
+		}
+		
+		footer {
+		  
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding: 1em;
+		background-color: #ffffff;
+		font-size: 0.7em;
+		text-align: center;
+		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+		}
+		
+
+	/************************
+			DIV BOXEN
+	*************************/
+	
+		#main {
+		
+		position: fixed;
+		
+		}
+		
+		div {
+		
+
+		float: left;
+		margin: 1em;
+		
+		
+		}
+		
+		.card {
+		
+		background-color: #7a0033;
+		height: 10em;
+		width: 10em;
+		margin: 1em;
+		box-sizing: border-box;
+		
+		}
+		
+		div.open {
+		
+		}
+		
+		div.hidden {
+		
+		background-color: #7a0033;
+		
+		}
+		
+		div.taken {
+		
+		background-color: #3f3f3f;
+		
+		}
