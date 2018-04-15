@@ -45,20 +45,42 @@ namespace MemoryGame {
         if (paarzahl < 5 || paarzahl > 8) {
             paarzahl = 8;
         }
+
+
+        //math.random() weist den divs random zahlen zu. 
+        //divs werden dann jeweils hidden, taken oder visible angezeigt (s. css)
+        function randomState(): string {
+            let randomState: number = Math.random();
+
+            if (randomState <= .5) {
+
+                return "hidden";
+
+            } else if (randomState > .5 && randomState <= .75) {
+
+                return "taken";
+            } else if (randomState > .75) {
+
+                return "visible";
+            }
+        }
+
+        //Karten werden in die Seite eingefügt
+        for (let i: number = 0; i < paarzahl; i++) {
+            createCard(cardContent[i], randomState());
+            createCard(cardContent[i], randomState());
+        }
+
     }
 
     //Karten werden erstellt
-    function createCard(_cardContent: string, _status: string): void {
+    function createCard(_cardContent: number, _status: string): void {
         let card: HTMLElement = document.createElement("div");
-        card.innerText = _cardContent;
+        card.innerText = _cardContent.toString(); //_cardContent: number wird zu einem string umgwandelt ".toString()"
         card.setAttribute("class", "card" + _status);
         cardArray.push(card);
     }
 
-    //Karten werSden in die Seite eingefügt
-    for (let i: number = 0; i < paarzahl; i++) {
-          createCard(cardContent[i], randomState());
-          createCard(cardContent[i], randomState());
-        }
+
 
 }
