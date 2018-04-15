@@ -45,7 +45,7 @@ namespace MemoryGame {
         if (paarzahl < 5 || paarzahl > 8) {
             paarzahl = 8;
         }
-        
+
         //Hier kommt das Kind hin :)
         playerInfo = document.getElementById("playerinfo");
         cardField = document.getElementById("spielbrett");
@@ -83,7 +83,7 @@ namespace MemoryGame {
 
         randomMix(cardArray);
 
-        
+
         //Karten werden an HTML gehängt
         for (let i: number = 0; i < cardArray.length; i++) {
             cardField.appendChild(cardArray[i]);
@@ -91,7 +91,7 @@ namespace MemoryGame {
 
     }
 
-    
+
     //Karten werden erstellt
     function createCard(_cardContent: number, _status: string): void {
         let card: HTMLElement = document.createElement("div");
@@ -100,6 +100,38 @@ namespace MemoryGame {
         cardArray.push(card);
     }
 
+    // Dieser Part wurde von Melvin Busch übernommen, da wir nicht wissen, wie es anders gelöst werden kann
+    class Player {
+
+        score: number;
+        name: string;
+        player: HTMLElement;
+
+        constructor(_name: string) {
+            this.name = _name;
+            this.score = 0;
+        }
+
+        scoreUp(): number {
+            this.score += 10;
+            return this.score;
+        }
+
+        show(): void {
+            this.player = document.createElement("div");
+            this.player.innerHTML = `
+              <span class="player-name">${this.name}</span>
+              <span class="player-score">Punkte: ${this.score}</span>`;
+            playerInfo.appendChild(this.player);
+        }
+    }
+    /*************** Part Ende *************/
 
 
+        // Spieler Anzeige
+        for (let i: number = 0; i < spielerzahl; i++) {
+            let player: Player = new Player("Spieler " + (i + 1));
+            player.show();
+        }
+    
 }

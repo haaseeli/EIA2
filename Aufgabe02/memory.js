@@ -69,5 +69,29 @@ var MemoryGame;
         card.setAttribute("class", "card" + _status);
         cardArray.push(card);
     }
+    // Dieser Part wurde von Melvin Busch �bernommen, da wir nicht wissen, wie es anders gel�st werden kann
+    class Player {
+        constructor(_name) {
+            this.name = _name;
+            this.score = 0;
+        }
+        scoreUp() {
+            this.score += 10;
+            return this.score;
+        }
+        show() {
+            this.player = document.createElement("div");
+            this.player.innerHTML = `
+              <span class="player-name">${this.name}</span>
+              <span class="player-score">Punkte: ${this.score}</span>`;
+            playerInfo.appendChild(this.player);
+        }
+    }
+    /*************** Part Ende *************/
+    // Spieler Anzeige
+    for (let i = 0; i < spielerzahl; i++) {
+        let player = new Player("Spieler " + (i + 1));
+        player.show();
+    }
 })(MemoryGame || (MemoryGame = {}));
 //# sourceMappingURL=memory.js.map
