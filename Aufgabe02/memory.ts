@@ -1,8 +1,8 @@
     /*
-    Aufgabe: Aufgabe 13
+    Aufgabe: Aufgabe 2
     Name: Elisabeth Haase
     Matrikel: 256436
-    Datum: 21.06.17
+    Datum: 15.04.2018
 
      Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
      Er wurde nicht kopiert und auch nicht diktiert.
@@ -28,17 +28,27 @@ namespace MemoryGame {
     
     let karten: karte[] = []; 
     
+   
     
     //Abfragen-Funktion Spielerzahl und Paarzahl prompts:
-    spielerzahl = parseInt(prompt('Spielerzahl:'));
-    paarzahl = parseInt(prompt('Mit wie vielen Paaren wird gespielt? (5 bis 8 verfügbar)'));
+    spielerzahl = parseInt(prompt("Spielerzahl:", ""), 4);
+    spielerzahl > 4 ? spielerzahl = 4 : spielerzahl = spielerzahl;
+    
+    paarzahl = parseInt(prompt("Mit wie vielen Paaren wird gespielt? (5 bis 8 verfügbar)", ""), 8);
+    if (paarzahl < 5 || paarzahl > 8) {
+        paarzahl = 8;
+        }
+    
+    
+    //function createCard(_cardContent: string, _status: string): void {
+        //let card: HTMLElement = document.createElement("div");
+        //card.innerText = _cardContent;
+        //card.setAttribute("class", "card " + _status);
+       // cardArray.push(card);
+      //}
     
     //header mit Spielerinfo
-    function createHeader(): void {
-        
-        let info: HTMLElement = document.createElement("header");
-            document.body.appendChild(info);
-        
-        
+   
+
     
 }
