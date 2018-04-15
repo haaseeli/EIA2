@@ -29,7 +29,10 @@ namespace MemoryGame {
     let karten: karte[] = []; 
     
    
-    function main(): void {
+    
+    function init(): void {
+        
+        
     //Abfragen-Funktion Spielerzahl und Paarzahl prompts:
     spielerzahl = parseInt(prompt("Spielerzahl:", ""), 4);
     spielerzahl > 4 ? spielerzahl = 4 : spielerzahl = spielerzahl;
@@ -40,14 +43,7 @@ namespace MemoryGame {
         }
     }
     
-    //function createCard(_cardContent: string, _status: string): void {
-        //let card: HTMLElement = document.createElement("div");
-        //card.innerText = _cardContent;
-        //card.setAttribute("class", "card " + _status);
-       // cardArray.push(card);
-      //}
-    
-    //header mit Spielerinfo
+
    
 
     

@@ -16,7 +16,7 @@ var MemoryGame;
     let cardContent = [1, 2, 28, 10, 1995, 42, 1776, 37];
     ;
     let karten = [];
-    function main() {
+    function init() {
         //Abfragen-Funktion Spielerzahl und Paarzahl prompts:
         spielerzahl = parseInt(prompt("Spielerzahl:", ""), 4);
         spielerzahl > 4 ? spielerzahl = 4 : spielerzahl = spielerzahl;
