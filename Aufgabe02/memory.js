@@ -27,6 +27,7 @@ var MemoryGame;
         if (paarzahl < 5 || paarzahl > 8) {
             paarzahl = 8;
         }
+        //Hier kommt das Kind hin :)
         playerInfo = document.getElementById("playerinfo");
         cardField = document.getElementById("spielbrett");
         function randomMix(_array) {

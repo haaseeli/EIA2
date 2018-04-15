@@ -46,6 +46,7 @@ namespace MemoryGame {
             paarzahl = 8;
         }
         
+        //Hier kommt das Kind hin :)
         playerInfo = document.getElementById("playerinfo");
         cardField = document.getElementById("spielbrett");
 
