@@ -80,6 +80,8 @@
 		
 		div.open {
 		
+		background-color: grey;
+		
 		}
 		
 		div.hidden {
@@ -91,5 +93,15 @@
 		div.taken {
 		
 		background-color: #3f3f3f;
+		
+		}
+		
+	/************************
+			player info
+	*************************/
+	
+		h2 {
+		
+		font-size: 1em;
 		
 		}
