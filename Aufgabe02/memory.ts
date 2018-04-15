@@ -46,6 +46,8 @@ namespace MemoryGame {
             paarzahl = 8;
         }
         
+        playerInfo = document.getElementById("playerinfo");
+        cardField = document.getElementById("spielbrett");
 
         function randomMix(_array: any[]): any[] {
             for (let i: number = _array.length - 1; i > 0; i--) {
