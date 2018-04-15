@@ -9,19 +9,6 @@
 		**/
 		
 
-		header {
-		
-		position: fixed;
-		right: 0;
-		top: 0;
-		left: 0;
-		padding: 1em;
-		background-color: #ffffff;
-		font-size: 0.9em;
-		text-align: center;
-		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
-		
-		}
 		
 		body {
 		  
@@ -35,25 +22,26 @@
 		
 		}
 		
-		footer {
-		  
+
+	/************************
+			
+	*************************/
+	
+		#playerinfo {
+		
 		position: fixed;
 		right: 0;
-		bottom: 0;
+		top: 0;
 		left: 0;
 		padding: 1em;
 		background-color: #ffffff;
 		font-size: 0.7em;
 		text-align: center;
 		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
-		}
 		
-
-	/************************
-			DIV BOXEN
-	*************************/
+		}
 	
-		#main {
+		#spielbrett {
 		
 		position: fixed;
 		
@@ -78,19 +66,19 @@
 		
 		}
 		
-		div.open {
+		.open {
 		
 		background-color: grey;
 		
 		}
 		
-		div.hidden {
+		.hidden {
 		
 		background-color: #7a0033;
 		
 		}
 		
-		div.taken {
+		.taken {
 		
 		background-color: #3f3f3f;
 		

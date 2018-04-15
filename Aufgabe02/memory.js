@@ -27,6 +27,13 @@ var MemoryGame;
         if (paarzahl < 5 || paarzahl > 8) {
             paarzahl = 8;
         }
+        function randomMix(_array) {
+            for (let i = _array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [_array[i], _array[j]] = [_array[j], _array[i]];
+            }
+            return _array;
+        }
         //math.random() weist den divs random zahlen zu. 
         //divs werden dann jeweils hidden, taken oder visible angezeigt (s. css)
         function randomState() {
@@ -45,6 +52,11 @@ var MemoryGame;
         for (let i = 0; i < paarzahl; i++) {
             createCard(cardContent[i], randomState());
             createCard(cardContent[i], randomState());
+        }
+        randomMix(cardArray);
+        //Karten werden an HTML geh�ngt
+        for (let i = 0; i < cardArray.length; i++) {
+            cardField.appendChild(cardArray[i]);
         }
     }
     //Karten werden erstellt
