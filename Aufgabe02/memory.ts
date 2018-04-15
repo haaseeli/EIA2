@@ -1,17 +1,17 @@
-    /*
-    Aufgabe: Aufgabe 2
-    Name: Elisabeth Haase
-    Matrikel: 256436
-    Datum: 15.04.2018
+/*
+Aufgabe: Aufgabe 2
+Name: Elisabeth Haase
+Matrikel: 256436
+Datum: 15.04.2018
 
-     Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
-     Er wurde nicht kopiert und auch nicht diktiert.
-     */
+ Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
+ Er wurde nicht kopiert und auch nicht diktiert.
+ */
 
 namespace MemoryGame {
 
     //Abfragen-Funktion für Spielerzahl und Paarzahl
-    document.addEventListener("DOMContentLoaded", init);
+    document.addEventListener("DOMContentLoaded", main);
 
 
     let spielerzahl: number;
@@ -51,10 +51,14 @@ namespace MemoryGame {
     function createCard(_cardContent: string, _status: string): void {
         let card: HTMLElement = document.createElement("div");
         card.innerText = _cardContent;
-        card.setAttribute("class", "card " + _status);
+        card.setAttribute("class", "card" + _status);
         cardArray.push(card);
     }
 
+    //Karten werSden in die Seite eingefügt
+    for (let i: number = 0; i < paarzahl; i++) {
+          createCard(cardContent[i], randomState());
+          createCard(cardContent[i], randomState());
+        }
 
-    document.addEventListener("DOMContentLoaded", main);
 }

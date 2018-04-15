@@ -10,7 +10,7 @@ Datum: 15.04.2018
 var MemoryGame;
 (function (MemoryGame) {
     //Abfragen-Funktion f�r Spielerzahl und Paarzahl
-    document.addEventListener("DOMContentLoaded", init);
+    document.addEventListener("DOMContentLoaded", main);
     let spielerzahl;
     let paarzahl;
     let cardContent = [1, 2, 28, 10, 1995, 42, 1776, 37];
@@ -32,9 +32,8 @@ var MemoryGame;
     function createCard(_cardContent, _status) {
         let card = document.createElement("div");
         card.innerText = _cardContent;
-        card.setAttribute("class", "card " + _status);
+        card.setAttribute("class", "card" + _status);
         cardArray.push(card);
     }
-    document.addEventListener("DOMContentLoaded", main);
 })(MemoryGame || (MemoryGame = {}));
 //# sourceMappingURL=memory.js.map
