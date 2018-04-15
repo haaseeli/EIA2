@@ -10,20 +10,17 @@
 
 namespace MemoryGame {
     
-    interface Memory {
-        
-        CardContent: number;
-        Status: string;
-        
-        }
+    let spielerzahl: number;
+    let paarzahl: number;
+    let cardContent: number[] = [1, 2, 28, 10, 1995, 42, 1776, 37];
     
-    let eins: Memory = {
-        CardContent: 1,
-        Status: ["open", "taken", "hidden"]
-        }
-        
-       
+    interface karte {
+        cardContent: number;
+        status: string; 
+    };
+    
+    
+    let karten: karte[] = []; 
+    
     
     }
-    
-    
