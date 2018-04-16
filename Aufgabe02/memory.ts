@@ -88,6 +88,11 @@ namespace MemoryGame {
         for (let i: number = 0; i < cardArray.length; i++) {
             cardField.appendChild(cardArray[i]);
         }
+        
+                for (let i: number = 0; i < spielerzahl; i++) {
+            let player: Player = new Player("Spieler " + (i + 1));
+            player.show();
+        }
 
     }
 
@@ -128,10 +133,4 @@ namespace MemoryGame {
     /*************** Part Ende *************/
 
 
-        // Spieler Anzeige
-        for (let i: number = 0; i < spielerzahl; i++) {
-            let player: Player = new Player("Spieler " + (i + 1));
-            player.show();
-        }
-    
 }

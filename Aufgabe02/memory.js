@@ -61,6 +61,10 @@ var MemoryGame;
         for (let i = 0; i < cardArray.length; i++) {
             cardField.appendChild(cardArray[i]);
         }
+        for (let i = 0; i < spielerzahl; i++) {
+            let player = new Player("Spieler " + (i + 1));
+            player.show();
+        }
     }
     //Karten werden erstellt
     function createCard(_cardContent, _status) {
@@ -86,12 +90,6 @@ var MemoryGame;
               <span class="player-score">Punkte: ${this.score}</span>`;
             playerInfo.appendChild(this.player);
         }
-    }
-    /*************** Part Ende *************/
-    // Spieler Anzeige
-    for (let i = 0; i < spielerzahl; i++) {
-        let player = new Player("Spieler " + (i + 1));
-        player.show();
     }
 })(MemoryGame || (MemoryGame = {}));
 //# sourceMappingURL=memory.js.map
