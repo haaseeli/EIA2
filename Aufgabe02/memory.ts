@@ -38,10 +38,10 @@ namespace MemoryGame {
 
 
         //Abfragen-Funktion Spielerzahl und Paarzahl prompts:
-        spielerzahl = parseInt(prompt("Spielerzahl:", ""), 4);
+        spielerzahl = parseInt(prompt("Spieler (1 bis 4)", ""));
         spielerzahl > 4 ? spielerzahl = 4 : spielerzahl = spielerzahl;
 
-        paarzahl = parseInt(prompt("Mit wie vielen Paaren wird gespielt? (5 bis 8 verfuegbar)", ""), 8);
+        paarzahl = parseInt(prompt("Mit wie vielen Paaren wird gespielt? (5 bis 8 verfuegbar)", ""));
         if (paarzahl < 5 || paarzahl > 8) {
             paarzahl = 8;
         }
@@ -62,6 +62,7 @@ namespace MemoryGame {
         function randomState(): string {
             let randomState: number = Math.random();
 
+
             if (randomState <= .5) {
 
                 return "hidden";
@@ -73,63 +74,73 @@ namespace MemoryGame {
 
                 return "visible";
             }
+
         }
-
-        //Karten werden in die Seite eingefügt
-        for (let i: number = 0; i < paarzahl; i++) {
-            createCard(cardContent[i], randomState());
-            createCard(cardContent[i], randomState());
-        }
-
-        randomMix(cardArray);
-
-
-        //Karten werden an HTML gehängt
-        for (let i: number = 0; i < cardArray.length; i++) {
-            cardField.appendChild(cardArray[i]);
-        }
-        
-                for (let i: number = 0; i < spielerzahl; i++) {
-            let player: Player = new Player("Spieler " + (i + 1));
-            player.show();
-        }
-
     }
 
 
-    //Karten werden erstellt
-    function createCard(_cardContent: number, _status: string): void {
-        let card: HTMLElement = document.createElement("div");
+
+
+
+    //Karten werden in die Seite eingefügt
+    for (let i: number = 0; i < paarzahl; i++) {
+        createCard(cardContent[i], randomState());
+        createCard(cardContent[i], randomState());
+    }
+
+    randomMix(cardArray);
+
+
+    //Karten werden an HTML gehängt
+    for (let i: number = 0; i < cardArray.length; i++) {
+        cardField.appendChild(cardArray[i]);
+    }
+
+    for (let i: number = 0; i < spielerzahl; i++) {
+        let player: Player = new Player("Spieler " + (i + 1));
+        player.show();
+    }
+
+}
+
+
+//Karten werden erstellt
+function createCard(_cardContent: number, _status: string): void {
+    let card: HTMLElement = document.createElement("div");
+
+    if (_status == hidden) { //tu nichts? 
+    } else {
         card.innerText = _cardContent.toString(); //_cardContent: number wird zu einem string umgwandelt ".toString()"
-        card.setAttribute("class", "card" + _status);
-        cardArray.push(card);
+    }
+    card.setAttribute("class", "card" + _status);
+    cardArray.push(card);
+}
+
+// Dieser Part wurde von Melvin Busch übernommen, da wir nicht wissen, wie es anders gelöst werden kann
+class Player {
+
+    score: number;
+    name: string;
+    player: HTMLElement;
+
+    constructor(_name: string) {
+        this.name = _name;
+        this.score = 0;
     }
 
-    // Dieser Part wurde von Melvin Busch übernommen, da wir nicht wissen, wie es anders gelöst werden kann
-    class Player {
+    scoreUp(): number {
+        this.score += 10;
+        return this.score;
+    }
 
-        score: number;
-        name: string;
-        player: HTMLElement;
-
-        constructor(_name: string) {
-            this.name = _name;
-            this.score = 0;
-        }
-
-        scoreUp(): number {
-            this.score += 10;
-            return this.score;
-        }
-
-        show(): void {
-            this.player = document.createElement("div");
-            this.player.innerHTML = `
+    show(): void {
+        this.player = document.createElement("div");
+        this.player.innerHTML = `
               <span class="player-name">${this.name}</span>
               <span class="player-score">Punkte: ${this.score}</span>`;
-            playerInfo.appendChild(this.player);
-        }
+        playerInfo.appendChild(this.player);
     }
+}
     /*************** Part Ende *************/
 
 

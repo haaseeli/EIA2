@@ -21,9 +21,9 @@ var MemoryGame;
     let karten = [];
     function main() {
         //Abfragen-Funktion Spielerzahl und Paarzahl prompts:
-        spielerzahl = parseInt(prompt("Spielerzahl:", ""), 4);
+        spielerzahl = parseInt(prompt("Spieler (1 bis 4)", ""));
         spielerzahl > 4 ? spielerzahl = 4 : spielerzahl = spielerzahl;
-        paarzahl = parseInt(prompt("Mit wie vielen Paaren wird gespielt? (5 bis 8 verfuegbar)", ""), 8);
+        paarzahl = parseInt(prompt("Mit wie vielen Paaren wird gespielt? (5 bis 8 verfuegbar)", ""));
         if (paarzahl < 5 || paarzahl > 8) {
             paarzahl = 8;
         }

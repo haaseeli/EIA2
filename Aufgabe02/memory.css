@@ -68,25 +68,36 @@
 		text-align: center;
 		background-color: #7a0033;
 		
-		}
-		
-		
-		.open {
-		
-		background-color: grey;
 		
 		}
 		
-		.hidden {
+		
+		.cardvisible {
+		
+		background-color: #f5f5f5;
+		box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);
+		display: flex;
+  		align-items: center;
+  		justify-content: center;
+  		
+		}
+		
+		.cardhidden {
 		
 		background-color: #7a0033;
-		
+		display: flex;
+  		align-items: center;
+  		justify-content: center;
+  		
 		}
 		
-		.taken {
+		.cardtaken {
 		
-		background-color: #3f3f3f;
-		
+		background-color: #0b0b0b;
+		display: flex;
+  		align-items: center;
+  		justify-content: center;
+
 		}
 		
 		
