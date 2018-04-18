@@ -38,13 +38,14 @@ namespace MemoryGame {
 
 
         //Abfragen-Funktion Spielerzahl und Paarzahl prompts:
-        spielerzahl = parseInt(prompt("Spieler (1 bis 4)", ""));
-        spielerzahl > 4 ? spielerzahl = 4 : spielerzahl = spielerzahl;
+        do {
+        spielerzahl = parseInt(prompt("Spieler (1 bis 4)", ""), 4);
+        } while (isNaN(spielerzahl) || spielerzahl <= 1 || spielerzahl > 4);
 
-        paarzahl = parseInt(prompt("Mit wie vielen Paaren wird gespielt? (5 bis 8 verfuegbar)", ""));
-        if (paarzahl < 5 || paarzahl > 8) {
-            paarzahl = 8;
-        }
+        do { 
+        paarzahl = parseInt(prompt("Mit wie vielen Paaren wird gespielt? (5 bis 8 verfuegbar)", ""), 8);
+        } while (isNaN(paarzahl) || paarzahl <= 5 || paarzahl > 8);
+
 
         //Hier kommt das Kind hin :)
         playerInfo = document.getElementById("playerinfo");
@@ -58,7 +59,7 @@ namespace MemoryGame {
             return _array;
         }
         //math.random() weist den divs random zahlen zu. 
-        //divs werden dann jeweils hidden, taken oder visible angezeigt (s. css)
+        //divs werden dann jeweils random hidden, taken oder visible angezeigt (s. css)
         function randomState(): string {
             let randomState: number = Math.random();
 
@@ -100,6 +101,8 @@ namespace MemoryGame {
         let player: Player = new Player("Spieler " + (i + 1));
         player.show();
     }
+    
+        show();
 
 }
 
@@ -113,7 +116,7 @@ function createCard(_cardContent: number, _status: string): void {
         card.innerText = _cardContent.toString(); //_cardContent: number wird zu einem string umgwandelt ".toString()"
     }
     card.setAttribute("class", "card" + _status);
-    cardArray.push(card);
+    cardArray.push(card); //Array wird mit Karten befüllt
 }
 
 // Dieser Part wurde von Melvin Busch übernommen, da wir nicht wissen, wie es anders gelöst werden kann
@@ -142,6 +145,5 @@ class Player {
     }
 }
     /*************** Part Ende *************/
-
-
 }
+
