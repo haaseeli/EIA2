@@ -85,9 +85,6 @@
 		.cardhidden {
 		
 		background-color: #7a0033;
-		display: flex;
-  		align-items: center;
-  		justify-content: center;
   		visibility: hidden;
   		
 		}
