@@ -1,15 +1,15 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url("img/background4.jpg");
-    color: white;
+    background-color: #282828;
+    color: #eeeeee;
     display: flex;
     flex-direction: column;
 }
 
 h1 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 3em;
+    font-family: Calibri Light, 'Trebuchet MS', sans-serif;
+    font-size: 2.4em;
     align-self: center;
 }
 
@@ -18,7 +18,7 @@ h1 {
     display: flex;
     padding: 2em;
     flex-direction: column;
-    justify-content: right;
+    justify-content: center;
 }
 
 #handkarten {
@@ -29,7 +29,7 @@ h1 {
   
 #handkarte{
     display: flex;
-    border: 5px solid white;
+    background-color: #eeeeee;
     border-radius: 10px;
     width: 8em;
     margin: 2em;
@@ -43,41 +43,41 @@ h1 {
 }
 
 .zahl {
-    font-size: 1.7em;
+    font-size: 1.6em;
     display: flex;
-    height: 1.3em;
-    width: 1.1em;
+    height: 1.4em;
+    width: 1.2em;
     align-self: center;
 }
 
 .roteKarte {
     display: flex;
-    width: 1.7em;
+    width: 1.6em;
     color: red;
-    font-size: 2em;
+    font-size: 1.4em;
 }
 
 .schwarzeKarte {
     color: black;
-    font-size: 2em;
-    height: 1.3em;
+    font-size: 1.4em;
+    height: 1.2em;
     display: flex;
-    width: 3.7em;
+    width: 3.6em;
 }
 
 .ablegenundziehen {
     display: flex;
     flex-direction: row;
-    border: 10px solid green;
+    background-color: #000000;
     padding: 3em;
-    margin: 5em;
+    margin: 4em;
     align-self: center;
     flex-direction: row;
     width: 70em;
 }
   
 .ablegestapel {
-    border: 5px solid gray;
+    background-color: #ffffff;
     width: 15em;
     height: 20em;
     display: flex;
@@ -85,14 +85,14 @@ h1 {
 }
   
 .deck {
-    width: 15em;
+    width: 14em;
     height: 20em;
     display: flex;
     margin: 0em 10em;
 }
 
 .kartenrücken {
-    width: 15em;
+    width: 16em;
     height: 20em;
     cursor: pointer;
 }
@@ -100,7 +100,7 @@ h1 {
 @media only screen and (min-width: 1280px){
     #handkarte{
         display: flex;
-        border: 5px solid white;
+        background-color: #eeeeee;
         border-radius: 10px;
         width: 12em;
         margin: 2em;
@@ -111,7 +111,7 @@ h1 {
 @media only screen and (min-width: 1920px){
     #handkarte{
         display: flex;
-        border: 5px solid white;
+        background-color: #eeeeee;
         border-radius: 10px;
         width: 15em;
         margin: 2.5em;
