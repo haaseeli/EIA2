@@ -37,12 +37,14 @@ h1 {
 }
 
 .zeichen {
+    color: #282828;
     font-size: 3em;
     display: flex;
     height: 1em; 
 }
 
 .zahl {
+    color: #282828;
     font-size: 1.6em;
     display: flex;
     height: 1.4em;
