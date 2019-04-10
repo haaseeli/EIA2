@@ -118,3 +118,27 @@ h1 {
     height: 20em;
     cursor: pointer;
 }
+
+@media only screen and (min-width: 1280px){
+    #handkarte{
+        display: flex;
+        background-color: #eeeeee;
+        border-radius: 10px;
+        width: 15em;
+        height: 20em;
+        margin: 4em;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    #handkarte{
+        display: flex;
+        background-color: #eeeeee;
+        border-radius: 10px;
+        width: 15em;
+        height: 20em;
+        margin: 4em;
+        flex-direction: column;
+    }
+}
