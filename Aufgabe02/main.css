@@ -77,7 +77,6 @@ h1 {
     padding: 3em;
     margin: 0em;
     align-self: center;
-    flex-direction: row;
     width: 100%;
 }
   
@@ -86,18 +85,17 @@ h1 {
     width: 15em;
     height: 20em;
     display: flex;
-    margin: 0em 10em;
 }
   
 .deck {
     width: 14em;
     height: 20em;
     display: flex;
-    margin: 0em 10em;
+    margin: 1em;
 }
 
 .kartenrücken {
-    width: 16em;
+    width: 14em;
     height: 20em;
     cursor: pointer;
 }
