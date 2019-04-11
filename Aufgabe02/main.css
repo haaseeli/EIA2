@@ -3,7 +3,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #282828;
+    background-color: #ffffff;
     color: #eeeeee;
     display: flex;
     flex-direction: column;
@@ -75,12 +75,12 @@ h1 {
 .ablegenundziehen {
     display: flex;
     flex-direction: row;
-    background-color: #000000;
+    background-color: #eeeeee;
     padding: 3em;
-    margin: 4em;
+    margin: 0em;
     align-self: center;
     flex-direction: row;
-    width: 70em;
+    width: 100%;
 }
   
 .ablegestapel {
