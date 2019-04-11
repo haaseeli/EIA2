@@ -74,7 +74,7 @@ h1 {
     display: flex;
     flex-direction: row;
     background-color: #eeeeee;
-    padding: 3em;
+    padding: 0em;
     margin: 0em;
     align-self: center;
     width: 100%;
