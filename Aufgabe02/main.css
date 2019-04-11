@@ -16,9 +16,7 @@ h1 {
 }
 
 .Spielfeld {
-    margin: 1.5em;
     display: flex;
-    padding: 2em;
     flex-direction: column;
     justify-content: center;
 }
