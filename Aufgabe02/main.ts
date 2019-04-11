@@ -205,62 +205,6 @@ let handkarten: Karte[] = []
 document.addEventListener("DOMContentLoaded", deckMischen);
 // Event: wenn die Seite geladen ist wird die funktion deckMischen aufgerufen
 
-function spielStart() {
-    let kartenanzahl = prompt("Wie viele Karten hättest du gerne? (1-5 Karten)");
-    startKarten(deck, kartenanzahl, 0);
-}
-
-function startKarten(deck: Karte[], kartenanzahl: string, i: number): Karte[] {
-    let handkarten: Karte[];
-    switch (kartenanzahl) {
-        case "1": {
-            handkarten = deck.splice(0, 1);
-            console.log(handkarten);
-            writeHTML(handkarten[i], "handkarten");
-        }
-            break;
-        case "2": {
-            handkarten = deck.splice(0, 2);
-            console.log(handkarten);
-        }
-            while (handkarten.length > i) {
-                writeHTML(handkarten[i], "handkarten");
-                i++;
-            }
-            break;
-        case "3": {
-            handkarten = deck.splice(0, 3);
-            console.log(handkarten);
-        }
-            while (handkarten.length > i) {
-                writeHTML(handkarten[i], "handkarten");
-                i++;
-            }
-            break;
-        case "4": {
-            handkarten = deck.splice(0, 4);
-            console.log(handkarten);
-        }
-            while (handkarten.length > i) {
-                writeHTML(handkarten[i], "handkarten");
-                i++;
-            }
-            break;
-        default:
-        case "5": {
-            handkarten = deck.splice(0, 5);
-            console.log(handkarten);
-        }
-            while (handkarten.length > i) {
-                writeHTML(handkarten[i], "handkarten");
-                i++;
-            }
-            break;
-    }
-    console.log("Alles erfolgreich generiert.");
-
-    return handkarten;
-}
 
 function deckMischen() {
     let zähler = deck.length;
@@ -277,7 +221,78 @@ function deckMischen() {
     spielStart();
 }
 
-// 
+
+function spielStart() {
+    let kartenanzahl = prompt("Wie viele Karten hättest du gerne? (1-5 Karten)");
+    startKarten(kartenanzahl);
+}
+// Eingabe des Users wird an die Funktion startKarten weitergegeben
+// Da es nur eine lokale Variable ist muss sie weitergegeben werden.
+
+
+function startKarten(kartenanzahl: string) {
+
+    let i: number = 0;
+
+    switch (kartenanzahl) {
+        case "1": {
+            handkarten = deck.splice(0, 1);
+            console.log(handkarten);
+            writeHTML(handkarten[i], "handkarten");
+        }
+            break;
+
+        case "2": {
+            handkarten = deck.splice(0, 2);
+            console.log(handkarten);
+        }
+        // deck.splice fängt bei Stelle 0/n im Array an und "entfernt" 2/n Elemente 
+        // diese Elemente werden in handkarten zurückgegeben/angezeigt
+
+            while (handkarten.length > i) {
+                writeHTML(handkarten[i], "handkarten");
+                i++;
+            }
+
+
+            break;
+
+        case "3": {
+            handkarten = deck.splice(0, 3);
+            console.log(handkarten);
+        }
+            while (handkarten.length > i) {
+                writeHTML(handkarten[i], "handkarten");
+                i++;
+            }
+            break;
+
+        case "4": {
+            handkarten = deck.splice(0, 4);
+            console.log(handkarten);
+        }
+            while (handkarten.length > i) {
+                writeHTML(handkarten[i], "handkarten");
+                i++;
+            }
+            break;
+
+        default:
+        case "5": {
+            handkarten = deck.splice(0, 5);
+            console.log(handkarten);
+        }
+            while (handkarten.length > i) {
+                writeHTML(handkarten[i], "handkarten");
+                i++;
+            }
+            break;
+
+    }
+    console.log("Alles erfolgreich generiert.");
+}
+
+
 function karteZiehen(handkarten: Karte[]) {
     let i: number = 0;
     let ziehen = deck.pop();

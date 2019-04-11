@@ -27,13 +27,15 @@ h1 {
     justify-content: center;
 }
   
-#handkarte{
+#handkarte {
     display: flex;
     background-color: #eeeeee;
     border-radius: 10px;
-    width: 8em;
+    width: 40%;
+    height: 50%;
     margin: 2em;
     flex-direction: column;
+
 }
 
 .zeichen {
@@ -100,7 +102,7 @@ h1 {
     cursor: pointer;
 }
 
-@media only screen and (min-width: 1280px){
+@media only screen and (min-width: 48em){
     #handkarte{
         display: flex;
         background-color: #eeeeee;
@@ -111,13 +113,13 @@ h1 {
     }
 }
 
-@media only screen and (min-width: 1920px){
+@media only screen and (min-width: 64em){
     #handkarte{
         display: flex;
         background-color: #eeeeee;
         border-radius: 10px;
-        width: 15em;
-        margin: 2.5em;
+        width: 14em;
+        margin: 2.4em;
         flex-direction: column;
     }
 }
