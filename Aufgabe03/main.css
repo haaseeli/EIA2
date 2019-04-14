@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i|Rubik+Mono+One');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #282828;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 2.4em;
+    align-self: center;
+}
+
+.Spielfeld {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#handkarten {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+  
+#handkarte {
+    display: flex;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    width: 40%;
+    height: 80%;
+    margin: 2em;
+    flex-direction: column;
+
+}
+
+.zeichen {
+    color: #282828;
+    font-size: 3em;
+    display: flex;
+    height: 1em; 
+}
+
+.zahl {
+    color: #282828;
+    font-size: 1.6em;
+    display: flex;
+    height: 1.4em;
+    width: 1.2em;
+    align-self: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.roteKarte {
+    display: flex;
+    width: 1.6em;
+    color: red;
+    font-size: 1.4em;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.schwarzeKarte {
+    color: black;
+    font-size: 1.4em;
+    height: 1.2em;
+    display: flex;
+    width: 3.6em;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.ablegenundziehen {
+    display: flex;
+    flex-direction: row;
+    background-color: #eeeeee;
+    padding: 1%;
+    margin: 0em;
+    align-self: center;
+    width: 100%;
+}
+  
+.ablegestapel {
+    background-color: #ffffff;
+    width: 15em;
+    height: 20em;
+    display: flex;
+}
+  
+.deck {
+    width: 40%;
+    height: 80%;
+    display: flex;
+    margin: 1em;
+}
+
+.kartenrücken {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 48em){
+    #handkarte{
+        display: flex;
+        background-color: #eeeeee;
+        border-radius: 10px;
+        width: 12em;
+        margin: 2em;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 64em){
+    #handkarte{
+        display: flex;
+        background-color: #eeeeee;
+        border-radius: 10px;
+        width: 14em;
+        margin: 2.4em;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,46 @@
+<!--
+		Aufgabe: (Aufgabe 03)
+		Name: (Elisabeth Haase)
+		Matrikel: (256436)
+		Datum: (14.04.2019)
+		Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. 
+        Er wurde nicht kopiert und auch nicht diktiert.
+        
+        In Zusammenarbeit mit Lukas Blea entstanden. 
+		-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>MauMau</title>
+	<link href="main.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+	<h1>Mau Mau</h1>
+	<div class="Spielfeld">
+		<p id="spielStart"></p>
+		<div id="handkarten">
+		</div>
+		<div id="buttons">
+		<button>Handkarten nach Zeichen sortieren</button>
+		<button onclick="handkarteSpielen()">Karte Anlegen</button>
+		</div>
+		<div class="ablegenundziehen">
+		<div id="ablegestapel">
+		</div>
+		<div class="deck" onclick=karteZiehen()>
+			<img class="kartenrücken" src="https://haaseeli.github.io/EIA2/Aufgabe02/background.png">
+		</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
+
+
