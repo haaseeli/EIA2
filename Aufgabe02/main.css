@@ -42,12 +42,13 @@ h1 {
     color: #282828;
     font-size: 3em;
     display: flex;
-    height: 1em; 
+    height: 1em;
+    padding-left: 2%;
 }
 
 .zahl {
     color: #282828;
-    font-size: 1.6em;
+    font-size:  170%;
     display: flex;
     height: 1.4em;
     width: 1.2em;
@@ -61,6 +62,7 @@ h1 {
     color: red;
     font-size: 1.4em;
     font-family: 'Open Sans', sans-serif;
+    align-self: center;
 }
 
 .schwarzeKarte {
@@ -70,6 +72,7 @@ h1 {
     display: flex;
     width: 3.6em;
     font-family: 'Open Sans', sans-serif;
+    align-self: center;
 }
 
 .ablegenundziehen {
