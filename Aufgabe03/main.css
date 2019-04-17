@@ -27,7 +27,7 @@ h1 {
     justify-content: center;
 }
   
-#handkarte {
+#handkarten div {
     display: flex;
     background-color: #eeeeee;
     border-radius: 10px;
