@@ -446,5 +446,5 @@ namespace A3 {
                 karteZiehen();
             }
         }
-
+        // Bei Leertaste wird eine Karte gezogen
 }
