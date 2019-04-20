@@ -12,6 +12,10 @@ body {
     font-family: Open Sans, sans-serif;
 }
 
+div {
+    width: 80%;
+}
+
 input:invalid {
 
 }
