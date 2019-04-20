@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i|Rubik+Mono+One');
 
+/*************** Main ***************/
 
 body {
     margin: 0;
@@ -9,6 +10,7 @@ body {
     background-color: #ffffff;
     color: #282828;
     font-family: Open Sans, sans-serif;
+    align: center;
 }
 
 h1 {
@@ -28,19 +30,25 @@ fieldset {
     border: solid 2px #282828;
 }
 
-legend {
-    font-family: Rubik Mono One, sans-serif;
-}
-
-
 fieldset fieldset {
     margin: 2% 0% 1% 0%;
     border: none;
 }
 
+legend {
+    font-family: Rubik Mono One, sans-serif;
+}
+
+
+/*************** Input ***************
+
 input:invalid {
 
 }
+
+**/
+
+/*************** Footer ***************/
 
 footer {
     position: fixed;
@@ -52,17 +60,19 @@ footer {
     z-index: 15;
 }
 
-@media screen and (min-width: 36em) {
+/*************** Media Query ***************/
+
+@media screen and (max-width: 36em) {
 
     body { 
-        margin-bottom: 20%;
+        margin-bottom: 10%;
     }
-
+    
     div {
         width: 96%;
         margin: 1%;
-
     }
+
 
     div fieldset {
         margin: 2%;
@@ -75,7 +85,7 @@ footer {
     body {
         margin-bottom: 10%;
     }
-
+    
     div {
         width: 66%;
         margin: 1%;
