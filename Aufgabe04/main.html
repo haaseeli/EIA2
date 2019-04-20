@@ -19,7 +19,7 @@
             <title>🍦 ice ice baby 🍦</title>
 
             <link href="main.css" rel="stylesheet" type="text/css">
-            <script type="text/javascript" src=""></script>
+            <script type="text/javascript" src="main.js"></script>
         </head>
         
 
@@ -32,44 +32,44 @@
             <legend> Eissorten </legend>
 
             <input type="number" name="Stepper" step="1" min="0" max="5" value="0"/> 
-            <input type="checkbox" name="Vanille" value="1.1" id="flavor1"/>
-            <label for="flavor1">Vanille</label> 
+            <input type="checkbox" name="Erdbeere" value="1" id="flavor1"/>
+            <label for="Erdbeere">Erdbeere</label> 
 
             <input type="number" name="Stepper" step="1" min="0" max="5" value="0"/>
-            <input type="checkbox" name="Erdbeere" value="0.9" id="flavor2"/>
-            <label for="flavor2">Erdbeere</label> 
-<!--
-            <input type="number" name="Stepper" step="1" min="0" max="5" value="0"/>
-            <input type="checkbox" name="Schokolade" value="eissorte" id="flavor3"/>
-            <label>Schokolade</label> 
+            <input type="checkbox" name="Vanille" value="1" id="flavor2"/>
+            <label for="Vanille">Vanille</label> 
 
             <input type="number" name="Stepper" step="1" min="0" max="5" value="0"/>
-            <input type="checkbox" name="Haselnuss" value="eissorte" id="flavor4"/>
-            <label>Haselnuss</label> 
+            <input type="checkbox" name="Kokos" value="11" id="flavor3"/>
+            <label for="Kokos">Kokos</label> 
 
             <input type="number" name="Stepper" step="1" min="0" max="5" value="0"/>
-            <input type="checkbox" name="Stracciatella" value="eissorte" id="flavor5"/>
-            <label>Stracciatella</label> 
+            <input type="checkbox" name="Himbeere" value="13" id="flavor4"/>
+            <label for="Himbeere">Himbeere</label> 
+
+            <input type="number" name="Stepper" step="1" min="0" max="5" value="0"/>
+            <input type="checkbox" name="Schokolade" value="3" id="flavor5"/>
+            <label for="Schokolade">Schokolade</label> 
             
             <input type="number" name="Stepper" step="1" min="0" max="5" value="0"/>
-            <input type="checkbox" name="Joghurt" value="eissorte" id="flavor6"/>
-            <label>Joghurt</label> 
+            <input type="checkbox" name="Apfel" value="5" id="flavor6"/>
+            <label for ="Apfel">Apfel</label> 
             
             <input type="number" name="Stepper" step="1" min="0" max="5" value="0"/>
-            <input type="checkbox" name="Latte Macchiato" value="eissorte" id="flavor7"/>
-            <label>Latte Macchiato</label> 
+            <input type="checkbox" name="Kiwi" value="3" id="flavor7"/>
+            <label for="Kiwi">Kiwi</label> 
             
             <input type="number" name="Stepper" step="1" min="0" max="5" value="0"/>
-            <input type="checkbox" name="Mango" value="eissorte" id="flavor8"/>
-            <label>Mango</label> 
+            <input type="checkbox" name="Melone" value="4" id="flavor8"/>
+            <label for="Melone">Melone</label> 
             
             <input type="number" name="Stepper" step="1" min="0" max="5" value="0"/>
-            <input type="checkbox" name="Cookie" value="eissorte" id="flavor9"/>
-            <label>Cookie</label> 
-            
+            <input type="checkbox" name="Haselnuss" value="1" id="flavor9"/>
+            <label for="Haselnuss">Haselnuss</label> 
+            <!---
             <input type="number" name="Stepper" step="1" min="0" max="5" value="0"/>
-            <input type="checkbox" name="Maracuja" value="eissorte" id="flavor10"/>
-            <label>Maracuja</label> 
+            <input type="checkbox" name="Zitrone" value="eissorte" id="flavor10"/>
+            <label>Zitrone</label> 
             
             <input type="number" name="Stepper" step="1" min="0" max="5" value="0"/>
             <input type="checkbox" name="Schlumpf" value="eissorte" id="flavor11"/>
@@ -164,7 +164,18 @@
         
 
     <footer>
-        <div id="overview"></div>
+        <div id="overview">
+        <span id="eis1"></span>
+        <span id="eis2"></span>
+        <span id="eis3"></span>
+        <span id="eis4"></span>
+        <span id="eis5"></span>
+        <span id="eis6"></span>
+        <span id="eis7"></span>
+        <span id="eis8"></span>
+        <span id="eis9"></span>
+        <span id="eis10"></span>
+        <p id="gesamtpreis"></p></div>
         <button name="Button" type="submit">Bestellung prüfen</button>
     </footer>
         </html>

@@ -1,5 +1,5 @@
-var Aufgabe3;
-(function (Aufgabe3) {
+var A3;
+(function (A3) {
     let sK7 = {
         farbe: "<p class='schwarzeKarte' target='click' >Schwarz</p>",
         zeichen: "♣",
@@ -197,11 +197,11 @@ var Aufgabe3;
     document.addEventListener("DOMContentLoaded", deckMischen);
     document.addEventListener("DOMContentLoaded", interaktiv);
     function interaktiv() {
-        document.getElementById("zeichensort").addEventListener("click", renderSortRang); //passt
-        document.getElementById("deck").addEventListener("click", karteZiehen); //passt
-        document.getElementById("handkarten").addEventListener("click", handkarteSpielen2);
-        document.getElementById("zahlsort").addEventListener("click", sortArrayZahl); //passt
-        document.addEventListener("keydown", leertaste); //passt
+        document.getElementById("zeichensort").addEventListener("click", renderSortRang);
+        document.getElementById("deck").addEventListener("click", karteZiehen);
+        document.getElementById("handkarte").addEventListener("click", handkarteSpielen2);
+        document.getElementById("zahlsort").addEventListener("click", sortArrayZahl);
+        document.addEventListener("keydown", leertaste);
     }
     function deckMischen() {
         let zähler = deck.length;
@@ -274,9 +274,7 @@ var Aufgabe3;
         console.log("Alles erfolgreich generiert.");
     }
     function writeHTML(handkarte, htmlID) {
-        // tslint:disable-next-line: typedef
         let prodElement = document.createElement("div");
-        // tslint:disable-next-line:typedef
         let elementstring = `
         <p id="${handkarte.rang}" class="zeichen">${handkarte.zeichen}</p>
         `;
@@ -362,16 +360,24 @@ var Aufgabe3;
             writeHTML(handkarten[i], "handkarten");
         }
     }
+    // 
     function handkarteSpielen2(_event) {
         let cast = _event.target;
+        // HTML Objekt wird verwendet / Cast ist eine Objektorientierte Variable 
         for (let i = 0; i < handkarten.length; i++) {
+            // Schleife läuft einmal komplett durch das Handkarten Array
             if (Number(cast.getAttribute("id")) == handkarten[i].rang) {
+                // Überprüft ob ID der Handkarte == Rang einer der Handkarten
+                // Auf Mausklick erhält die Funktion eine ID. Diese ID muss mit jeder Handkarte abgeglichen werden damit die 
+                // FUnktion weiß, welche Karte sie auf den Ablagestapel legen muss.
                 let ablegestapel = handkarten.splice(i, 1);
                 document.getElementById("ablegestapel").innerHTML = "";
                 writeHTML(ablegestapel[0], "ablegestapel");
+                // Schiebt Karte auf den Ablagestapel
                 document.getElementById("handkarten").innerHTML = "";
                 for (let i = 0; i < handkarten.length; i++) {
                     writeHTML(handkarten[i], "handkarten");
+                    // Aktualisiert HAndkarten, sodass nur noch die aktuellen Karten auf der Hand angezeigt werden, ohne die abgelegte
                 }
             }
         }
@@ -381,6 +387,6 @@ var Aufgabe3;
             karteZiehen();
         }
     }
-
-})(Aufgabe3 || (Aufgabe3 = {}));
+    // Bei Leertaste wird eine Karte gezogen
+})(A3 || (A3 = {}));
 //# sourceMappingURL=main.js.map

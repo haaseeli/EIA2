@@ -42,7 +42,7 @@ legend {
 }
 
 
-/*************** Input Validation ***************/
+/*************** Input Validation ***************
 
 input:invalid {
     border: solid red 1px;
