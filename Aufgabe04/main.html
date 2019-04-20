@@ -18,7 +18,7 @@
 
             <title> Eisdiele </title>
 
-            <link href="" rel="stylesheet" type="text/css">
+            <link href="main.css" rel="stylesheet" type="text/css">
             <script type="text/javascript" src=""></script>
         </head>
         
@@ -62,7 +62,7 @@
             <input type="checkbox" name="Schokosoße" value="topping" id="topping2"/>Schokosoße</label>
             <input type="checkbox" name="Erdbeersoße" value="topping" id="topping3"/>Erdbeersoße</label>
             <input type="checkbox" name="Schokostreusel" value="topping" id="topping4"/>Schokostreusel</label>
-            <input type="checkbox" name="Haselnussstreusel" value="topping" id="topping5"/>Haselnussstreusel</label>+
+            <input type="checkbox" name="Haselnussstreusel" value="topping" id="topping5"/>Haselnussstreusel</label>
             <input type="checkbox" name="Weiße Schokoladestreusel" value="topping" id="topping6"/>Weiße Schokoladestreusel</label>
             <input type="checkbox" name="Gummibärchen" value="topping" id="topping7"/>Gummibärchen</label>
         </fieldset>
@@ -78,7 +78,18 @@
             <input type="text" name="Name" required/><br/>
             Straße und Hausnummer<br/>
             <input type="text" name="Straße" required/> <input type="text" name="Hausnummer" required/>
+            <br/>Ort und PLZ<br/>
+            <input type="text" name="Ort" required/> <input type="text" name="PLZ" pattern="[0-9]{5}" placeholder="" required/>
+           
+                <fieldset id="radio">
+                    <legend> Lieferoptionen </legend>
+                        <input type="radio" name="Selbstabholung" value="lieferoption" id="selbstabholung1" />
+                        <label for="becher">Selbstabholung</label>
+                        <input type="radio" name="Waffel" value="lieferoption" id="selbstabholung2" />
+                        <label for="waffel">DHL</label>       
+                </fieldset>
         </fieldset>
+
 
 
 
