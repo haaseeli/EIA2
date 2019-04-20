@@ -159,14 +159,32 @@ let rKA = {
     zahl: 14,
 };
 let deck = [sK7, sK8, sK9, sK10, sKB, sKD, sKK, sKA, sP7, sP8, sP9, sP10, sPB, sPD, sPK, sPA, rH7, rH8, rH9, rH10, rHB, rHD, rHK, rHA, rK7, rK8, rK9, rK10, rKB, rKD, rKK, rKA];
+// Karten-Array
 let handkarten = [];
+// Variable wird so global gespeichert
 document.addEventListener("DOMContentLoaded", deckMischen);
-function spielStart(deck) {
-    let kartenanzahl = prompt("Wie viele Karten hättest du gerne? (1-5 Karten)");
-    startKarten(deck, kartenanzahl, 0);
+// Event: wenn die Seite geladen ist wird die funktion deckMischen aufgerufen
+function deckMischen() {
+    let zähler = deck.length;
+    while (zähler > 0) {
+        let index = Math.floor(Math.random() * zähler);
+        zähler--;
+        let temp = deck[zähler];
+        deck[zähler] = deck[index];
+        deck[index] = temp;
+    }
+    // math.random/math.floor interagiert je 1 mal mit jeder einzelnen Karte und ändert dessen Position im Array -> Karten werden gemischt
+    console.log(deck);
+    spielStart();
 }
-function startKarten(deck, kartenanzahl, i) {
-    let handkarten;
+function spielStart() {
+    let kartenanzahl = prompt("Wie viele Karten hättest du gerne? (1-5 Karten)");
+    startKarten(kartenanzahl);
+}
+// Eingabe des Users wird an die Funktion startKarten weitergegeben
+// Da es nur eine lokale Variable ist muss sie weitergegeben werden.
+function startKarten(kartenanzahl) {
+    let i = 0;
     switch (kartenanzahl) {
         case "1":
             {
@@ -180,6 +198,8 @@ function startKarten(deck, kartenanzahl, i) {
                 handkarten = deck.splice(0, 2);
                 console.log(handkarten);
             }
+            // deck.splice fängt bei Stelle 0/n im Array an und "entfernt" 2/n Elemente 
+            // diese Elemente werden in handkarten zurückgegeben/angezeigt
             while (handkarten.length > i) {
                 writeHTML(handkarten[i], "handkarten");
                 i++;
@@ -218,23 +238,7 @@ function startKarten(deck, kartenanzahl, i) {
             break;
     }
     console.log("Alles erfolgreich generiert.");
-    // karteZiehen(handkarten);
-    //Würde funktionieren aber an falscher Stelle. Unsicher wie ich dies am besten implementieren könnte.
-    return handkarten;
 }
-function deckMischen() {
-    let zähler = deck.length;
-    while (zähler > 0) {
-        let index = Math.floor(Math.random() * zähler);
-        zähler--;
-        let temp = deck[zähler];
-        deck[zähler] = deck[index];
-        deck[index] = temp;
-    }
-    console.log(deck);
-    spielStart(deck);
-}
-// Work in progress
 function karteZiehen(handkarten) {
     let i = 0;
     let ziehen = deck.pop();
@@ -264,5 +268,4 @@ function writeHTML(handkarte, htmlID) {
     prodElement.innerHTML = elementstring;
     document.getElementById(htmlID).appendChild(prodElement);
 }
-// In Zusammenarbeit mit Elisabeth Haase
 //# sourceMappingURL=main.js.map
