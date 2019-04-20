@@ -32,13 +32,13 @@
             <legend> Eissorten </legend>
 
             <input type="number" name="Stepper" step="1" min="0" max="5" value="0"/> 
-            <input type="checkbox" name="Vanille" value="eissorte" id="flavor1"/>
-            <label>Vanille</label> 
+            <input type="checkbox" name="Vanille" value="eissorte" id="flavor1" preis="1.10"/>
+            <label for="flavor1">Vanille</label> 
 
             <input type="number" name="Stepper" step="1" min="0" max="5" value="0"/>
-            <input type="checkbox" name="Erdbeere" value="eissorte" id="flavor2"/>
-            <label>Erdbeere</label> 
-
+            <input type="checkbox" name="Erdbeere" value="eissorte" id="flavor2" preis="1.00"/>
+            <label for="flavor1">Erdbeere</label> 
+<!--
             <input type="number" name="Stepper" step="1" min="0" max="5" value="0"/>
             <input type="checkbox" name="Schokolade" value="eissorte" id="flavor3"/>
             <label>Schokolade</label> 
@@ -111,7 +111,7 @@
             <input type="checkbox" name="Obama" value="eissorte" id="flavor20"/>
             <label>Obama</label> 
 
-            
+-->
         <hr/>
         <fieldset id="radio">
             <input type="radio" name="darreichungsform" value="darreichungsform1" id="becher" />
@@ -140,17 +140,17 @@
         <fieldset id="text">
             <legend> Lieferdaten </legend>
             Name<br/>
-            <input type="text" name="Name" required/><br/>
+            <input type="text" name="Name" placeholder="Speedy Gonzales" required/><br/>
             Straße und Hausnummer<br/>
-            <input type="text" name="Straße" required/> <input type="text" name="Hausnummer" required/>
+            <input type="text" name="Straße" required placeholder="choo choo" required/> <input type="text" name="Hausnummer" placeholder="123" required/>
             <br/>Ort und PLZ<br/>
-            <input type="text" name="Ort" required/> <input type="text" name="PLZ" pattern="[0-9]{5}" placeholder="" required/>
+            <input type="text" name="Ort" placeholder="makes the train" required/> <input type="text" name="PLZ" pattern="[0-9]{5}" placeholder="012345" required/>
            
                 <fieldset id="radio">
                     <legend> Lieferoptionen </legend>
-                        <input type="radio" name="lieferoption" value="lieferoption" id="selbstabholung1" />
+                        <input type="radio" name="lieferoption" value="lieferoption" id="pickup1" />
                         <label for="becher">Selbstabholung</label>
-                        <input type="radio" name="lieferoption" value="lieferoption" id="selbstabholung2" />
+                        <input type="radio" name="lieferoption" value="lieferoption" id="pickup2" />
                         <label for="waffel">DHL</label>       
                 </fieldset>
         </fieldset>
@@ -164,8 +164,7 @@
         
 
     <footer>
-        <p>test123</p> 
-
+        <div id="overview"></div>
         <button name="Button" type="submit">Bestellung prüfen</button>
     </footer>
         </html>
