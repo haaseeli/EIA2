@@ -1,21 +1,81 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i|Rubik+Mono+One');
 
-* {
-    display: flex;
-}
 
 body {
     margin: 0;
+    margin-bottom: 10%;
     padding: 0;
+    display: flex;
     background-color: #ffffff;
     color: #282828;
     font-family: Open Sans, sans-serif;
 }
 
-div {
-    width: 80%;
+h1 {
+    font-family: Rubik Mono One, sans-serif;
+}
+
+input[type="radio"], input[type="checkbox"], label {
+	display: inline;
+}
+
+label::after {
+	content:"";
+	display: block;
+}
+
+fieldset {
+    border: solid 2px #282828;
+    margin: 1%;
+}
+
+legend {
+    font-family: Rubik Mono One, sans-serif;
+}
+
+
+fieldset fieldset {
+    margin: 1% 0% 1% 0%;
+    border: none;
 }
 
 input:invalid {
+
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    left: 0%;
+    bottom: 0%;
+    background-color: #fff;
+    padding: 1%;
+    z-index: 15;
+}
+
+@media screen and (min-width: 36em) {
+
+    body { 
+        margin-bottom: 16%;
+    }
+
+    div {
+        width: 96%;
+        margin: 1%;
+
+    }
+
+}
+
+@media screen and (min-width: 64em) {
+
+    body {
+        margin-bottom: 10%;
+    }
+
+    div {
+        width: 66%;
+        margin: 1%;
+    }
 
 }
