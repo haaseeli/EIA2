@@ -26,7 +26,6 @@ label::after {
 
 fieldset {
     border: solid 2px #282828;
-    margin: 1%;
 }
 
 legend {
@@ -35,7 +34,7 @@ legend {
 
 
 fieldset fieldset {
-    margin: 1% 0% 1% 0%;
+    margin: 2% 0% 1% 0%;
     border: none;
 }
 
@@ -56,13 +55,17 @@ footer {
 @media screen and (min-width: 36em) {
 
     body { 
-        margin-bottom: 16%;
+        margin-bottom: 20%;
     }
 
     div {
         width: 96%;
         margin: 1%;
 
+    }
+
+    div fieldset {
+        margin: 2%;
     }
 
 }
@@ -75,6 +78,11 @@ footer {
 
     div {
         width: 66%;
+        margin: 1%;
+        padding-left: 15%;
+    }
+
+    div fieldset { 
         margin: 1%;
     }
 
