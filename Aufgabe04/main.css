@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i|Rubik+Mono+One');
 
+
+
+
 /*************** Main ***************/
 
 body {
@@ -10,7 +13,6 @@ body {
     background-color: #ffffff;
     color: #282828;
     font-family: Open Sans, sans-serif;
-    align: center;
 }
 
 h1 {
@@ -22,7 +24,7 @@ input[type="radio"], input[type="checkbox"], label {
 }
 
 label::after {
-	content:"";
+	content: "";
 	display: block;
 }
 
@@ -40,13 +42,21 @@ legend {
 }
 
 
-/*************** Input ***************
+/*************** Input Validation ***************/
 
 input:invalid {
-
+    border: solid red 1px;
 }
 
-**/
+input:valid {
+    border: #eee;
+}
+
+input:required {
+    border: #eee;
+}
+
+
 
 /*************** Footer ***************/
 
@@ -55,10 +65,12 @@ footer {
     width: 100%;
     left: 0%;
     bottom: 0%;
-    background-color: #fff;
+    background-color: #eee;
     padding: 1%;
     z-index: 15;
 }
+
+
 
 /*************** Media Query ***************/
 
@@ -67,7 +79,7 @@ footer {
     body { 
         margin-bottom: 10%;
     }
-    
+
     div {
         width: 96%;
         margin: 1%;
