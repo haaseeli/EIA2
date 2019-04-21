@@ -66,11 +66,11 @@
             <input type="number" name="Stepper" step="1" min="0" max="5" value="0"/>
             <input type="checkbox" name="Haselnuss" value="1" id="flavor9"/>
             <label for="Haselnuss">Haselnuss</label> 
-            <!---
+ 
             <input type="number" name="Stepper" step="1" min="0" max="5" value="0"/>
             <input type="checkbox" name="Zitrone" value="eissorte" id="flavor10"/>
             <label>Zitrone</label> 
-            
+                       <!---
             <input type="number" name="Stepper" step="1" min="0" max="5" value="0"/>
             <input type="checkbox" name="Schlumpf" value="eissorte" id="flavor11"/>
             <label>Schlumpf</label> 
@@ -114,20 +114,20 @@
 -->
         <hr/>
         <fieldset id="radio">
-            <input type="radio" name="darreichungsform" value="0.5" id="becher" />
+            <input type="radio" name="darreichungsform" value="5" id="becher" />
             <label for="becher">im Becher</label>
-            <input type="radio" name="darreichungsform" value="0.2" id="waffel" />
+            <input type="radio" name="darreichungsform" value="2" id="waffel" />
             <label for="waffel">in der Waffel</label>
         </fieldset>
         </fieldset>
 
         <fieldset id="text">
             <legend> Toppings </legend>
-            <input type="checkbox" name="Sahne" value="0.5" id="topping1"/><label for="topping1">Portion Sahne</label>
-            <input type="checkbox" name="Schokosoße" value="0.9" id="topping2"/><label for="topping2">Schokosoße</label>
-            <input type="checkbox" name="Erdbeersoße" value="0.9" id="topping3"/><label for="topping3">Erdbeersoße</label>
-            <input type="checkbox" name="Schokostreusel" value="0.3" id="topping4"/><label for="topping4">Schokostreusel</label>
-            <input type="checkbox" name="Gummibärchen" value="1.5" id="topping5"/><label for="topping5">Gummibärchen</label>
+            <input type="checkbox" name="Sahne" value="1" id="topping1"/><label for="topping1">Portion Sahne</label>
+            <input type="checkbox" name="Schokosoße" value="1" id="topping2"/><label for="topping2">Schokosoße</label>
+            <input type="checkbox" name="Erdbeersoße" value="1" id="topping3"/><label for="topping3">Erdbeersoße</label>
+            <input type="checkbox" name="Schokostreusel" value="1" id="topping4"/><label for="topping4">Schokostreusel</label>
+            <input type="checkbox" name="Gummibärchen" value="3" id="topping5"/><label for="topping5">Gummibärchen</label>
         </fieldset>
 
         <fieldset id="text">
@@ -146,9 +146,9 @@
            
                 <fieldset id="radio">
                     <legend></legend>
-                        <input type="radio" name="lieferoption" value="0" id="pickup1" />
+                        <input type="radio" name="lieferoption" value="0" id="Selbstabholung" />
                         <label for="pickup1">Selbstabholung</label>
-                        <input type="radio" name="lieferoption" value="2.0" id="pickup2" />
+                        <input type="radio" name="lieferoption" value="20" id="DHL" />
                         <label for="pickup2">DHL</label>       
                 </fieldset>
         </fieldset>
@@ -178,6 +178,12 @@
         <span id="eis8"></span>
         <span id="eis9"></span>
         <span id="eis10"></span>
+        <span id="topping1"></span>
+        <span id="topping2"></span>
+        <span id="topping3"></span>
+        <span id="topping4"></span>
+        <span id="topping5"></span>
+        <span id="versandart"></span>
         <p id="gesamtpreis"></p></div>
         <button name="Button" type="submit">Bestellung prüfen</button>
     </footer>

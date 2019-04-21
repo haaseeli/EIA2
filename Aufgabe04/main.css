@@ -54,20 +54,17 @@ legend {
 
 
 
-/*************** Input Validation ***************
+/*************** Button Action ***************/
 
-input:invalid {
-    border: solid red 1px;
+button {
+    background-color: #eee;
+    border: 2px solid #282828;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
-
-input:valid {
-    border: #eee;
-}
-
-input:required {
-    border: #eee;
-}
-
 
 
 /*************** Footer ***************/
