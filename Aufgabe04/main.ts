@@ -1,4 +1,4 @@
-namespace eisdealer {
+namespace Aufgabe04 {
 
     let gesamtpreis: number = 0;
 
@@ -214,7 +214,7 @@ namespace eisdealer {
                 }
                 break;
             }
-            case ("lieferoption"): {
+            case ("Lieferoption"): {
                 if (ziel.checked == true) {
                     document.getElementById("lieferoption").innerHTML = "Ihre gewählte Versandart: " + ziel.id;
                 } else {

@@ -1,5 +1,5 @@
-var eisdealer;
-(function (eisdealer) {
+var Aufgabe04;
+(function (Aufgabe04) {
     let gesamtpreis = 0;
     window.addEventListener("load", init);
     function init(_event) {
@@ -216,7 +216,7 @@ var eisdealer;
                 }
                 break;
             }
-            case ("lieferoption"): {
+            case ("Lieferoption"): {
                 if (ziel.checked == true) {
                     document.getElementById("lieferoption").innerHTML = "Ihre gewählte Versandart: " + ziel.id;
                 }
@@ -234,5 +234,5 @@ var eisdealer;
             document.getElementById("gesamtpreis").innerHTML = "Der Gesamtpreis der Bestellung beträgt: " + gesamtpreis + "€";
         }
     }
-})(eisdealer || (eisdealer = {}));
+})(Aufgabe04 || (Aufgabe04 = {}));
 //# sourceMappingURL=main.js.map
