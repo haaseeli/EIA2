@@ -1,4 +1,4 @@
-namespace eisdealer {
+namespace Aufgabe04 {
 
     let gesamtpreis: number = 0;
 
