@@ -1,5 +1,5 @@
-var eisdealer;
-(function (eisdealer) {
+var Aufgabe04;
+(function (Aufgabe04) {
     let gesamtpreis = 0;
     window.addEventListener("load", init);
     function init(_event) {
