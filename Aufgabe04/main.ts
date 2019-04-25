@@ -163,6 +163,9 @@ namespace Aufgabe04 {
         }
     }
 
+
+// ///////////////////////////////////////////////////////////////////////////////////////////////////// //
+
     function eissorteTrue(_eisID: string, _eisname: string, _eispreis: number): void {
         document.getElementById(_eisID).innerHTML = "1x  " + _eisname + " " + "|";
         preis(0, _eispreis, 0);
@@ -181,13 +184,23 @@ namespace Aufgabe04 {
         document.getElementById("gesamtpreis").innerHTML = "Der Gesamtpreis der Bestellung beträgt: " + gesamtpreis + "€";
     }
 
+        // gesamtpreis ist eine globale variable, so können sich die preise immer flexibel anpassen (subtrahieren bei unchecked und addieren bei checked)
+// ///////////////////////////////////////////////////////////////////////////////////////////////////// //
+
+
     function pressedButton(_event: Event): void {
-        let ziel: HTMLInputElement = <HTMLInputElement>_event.target;
-        console.log("pressed");
-        if (gesamtpreis == 0 || ziel.required == false || ziel.labels == undefined) {
-            document.getElementById("buttonangaben").innerHTML = "Es wurden wichtige Daten noch nicht ausgefüllt";
-        } else {
-            document.getElementById("buttonangaben").innerHTML = "";
+        console.log("Hallo Eli");
+        let inputs: HTMLCollectionOf<HTMLInputElement> = document.getElementsByTagName("input");
+        for (let i: number = 0; i < inputs.length; i++) {
+            let input: HTMLInputElement = inputs[i];
+            if (input.getAttribute("lieferdaten") == "true") {
+                if (gesamtpreis == 0 || input.value == "") {
+                    document.getElementById("buttonangaben").innerHTML = "Es wurden wichtige Daten noch nicht ausgefüllt.";
+                } else {
+                    document.getElementById("buttonangaben").innerHTML = "";
+                }
+            }
+            console.log(input.value);
         }
-    }  
+}  
 }

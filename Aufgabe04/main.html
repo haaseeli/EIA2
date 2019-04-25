@@ -32,34 +32,34 @@
         <fieldset id="text">
             <legend> Eissorten </legend>
 
-            <input type="checkbox" name="Erdbeere" value="1" id="Erdbeere" />
+            <input type="checkbox" name="Erdbeere" value="1" id="Erdbeere" required/>
             <label for="Erdbeere">Erdbeere</label>
 
-            <input type="checkbox" name="Vanille" value="1" id="Vanille" />
+            <input type="checkbox" name="Vanille" value="1" id="Vanille" required />
             <label for="Vanille">Vanille</label>
 
-            <input type="checkbox" name="Kokos" value="1" id="Kokos" />
+            <input type="checkbox" name="Kokos" value="1" id="Kokos" required/>
             <label for="Kokos">Kokos</label>
 
-            <input type="checkbox" name="Himbeere" value="1" id="Himbeere" />
+            <input type="checkbox" name="Himbeere" value="1" id="Himbeere" required/>
             <label for="Himbeere">Himbeere</label>
 
-            <input type="checkbox" name="Schokolade" value="1" id="Schokolade" />
+            <input type="checkbox" name="Schokolade" value="1" id="Schokolade" required/>
             <label for="Schokolade">Schokolade</label>
 
-            <input type="checkbox" name="Apfel" value="1" id="Apfel" />
+            <input type="checkbox" name="Apfel" value="1" id="Apfel" required />
             <label for="Apfel">Apfel</label>
 
-            <input type="checkbox" name="Kiwi" value="1" id="Kiwi" />
+            <input type="checkbox" name="Kiwi" value="1" id="Kiwi" required/>
             <label for="Kiwi">Kiwi</label>
 
-            <input type="checkbox" name="Melone" value="1" id="Melone" />
+            <input type="checkbox" name="Melone" value="1" id="Melone" required/>
             <label for="Melone">Melone</label>
 
-            <input type="checkbox" name="Haselnuss" value="1" id="Haselnuss" />
+            <input type="checkbox" name="Haselnuss" value="1" id="Haselnuss" required/>
             <label for="Haselnuss">Haselnuss</label>
 
-            <input type="checkbox" name="Zitrone" value="1" id="Zitrone" />
+            <input type="checkbox" name="Zitrone" value="1" id="Zitrone" required/>
             <label for="Zitrone">Zitrone</label>
 
             <hr />
@@ -73,15 +73,15 @@
 
         <fieldset id="text">
             <legend> Toppings </legend>
-            <input type="checkbox" name="Portion Sahne" value="1" id="Portion Sahne" /><label
+            <input type="checkbox" name="Portion Sahne" value="1" id="Portion Sahne" required /><label
                 for="Portion Sahne">Portion Sahne</label>
-            <input type="checkbox" name="Schokosoße" value="1" id="Schokosoße" /><label
+            <input type="checkbox" name="Schokosoße" value="1" id="Schokosoße" required/><label
                 for="Schokosoße">Schokosoße</label>
-            <input type="checkbox" name="Erdbeersoße" value="1" id="Erdbeersoße" /><label
+            <input type="checkbox" name="Erdbeersoße" value="1" id="Erdbeersoße" required /><label
                 for="Erdbeersoße">Erdbeersoße</label>
-            <input type="checkbox" name="Schokostreusel" value="1" id="Schokostreusel" /><label
+            <input type="checkbox" name="Schokostreusel" value="1" id="Schokostreusel" required/><label
                 for="Schokostreusel">Schokostreusel</label>
-            <input type="checkbox" name="Gummibärchen" value="1" id="Gummibärchen" /><label
+            <input type="checkbox" name="Gummibärchen" value="1" id="Gummibärchen" required/><label
                 for="Gummibärchen">Gummibärchen</label>
         </fieldset>
 
@@ -93,19 +93,21 @@
         <fieldset id="text">
             <legend> Lieferdaten </legend>
             Name<br />
-            <input type="text" name="Name" pattern="[A-Z a-z]{3,}" placeholder="Nicolas Cage" required /><br />
+            <input type="text" name="Name" pattern="[A-Z a-z]{3,}" placeholder="Nicolas Cage" lieferdaten="true"
+                required /><br />
             Straße und Hausnummer<br />
-            <input type="text" name="Straße" pattern="[A-Z a-z]{6,}" placeholder="San Vicente Blvd" required />
-            <input type="text" name="Hausnummer" pattern="[0-9]{1,2}" placeholder="24" required />
+            <input type="text" name="Straße" pattern="[A-Z a-z]{6,}" placeholder="San Vicente Blvd" lieferdaten="true"
+                required />
+            <input type="text" name="Hausnummer" pattern="[0-9]{1,2}" placeholder="24" lieferdaten="true" required />
             <br />Ort und PLZ<br />
-            <input type="text" name="Ort" placeholder="California" required /> <input type="text" name="PLZ"
-                pattern="[0-9]{5}" placeholder="78120" required/>
+            <input type="text" name="Ort" placeholder="California" lieferdaten="true" required /> <input type="text"
+                name="PLZ" pattern="[0-9]{5}" placeholder="78120" lieferdaten="true" required />
             <hr>
             <fieldset id="radio">
                 <legend>Bestelloptionen</legend>
-                <input type="radio" name="Lieferoption" value="lieferservice1" id="Selbstabholung" />
+                <input type="radio" name="Lieferoption" value="lieferservice1" id="Selbstabholung" required/>
                 <label for="Selbstabholung">Selbstabholung</label>
-                <input type="radio" name="Lieferoption" value="lieferservice2" id="DHL" />
+                <input type="radio" name="Lieferoption" value="lieferservice2" id="DHL" required/>
                 <label for="DHL">DHL</label>
             </fieldset>
         </fieldset>
