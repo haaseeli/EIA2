@@ -36,4 +36,4 @@ namespace L05_Server {                                      // namespace wird de
 
 		_response.end();                                    // _response ende :^) 
 	}
-}
+} console.log(L05_Server);
