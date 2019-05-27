@@ -13,10 +13,10 @@ let db: Mongo.Db;
 let students: Mongo.Collection;
 
 // running on heroku?
-//if (process.env.NODE_ENV == "") {
-//  databaseURL = "mongodb+srv://haendler1:haendler12345@pepsibank-id187.mongodb.net/";
-//    databaseName = "test";
-//}
+if (process.env.NODE_ENV == "production") {
+    databaseURL = "mongodb+srv://haendler1:haendler12345@pepsibank-id187.mongodb.net/";
+    databaseName = "test";
+}
 
 // try to connect to database, then activate callback "handleConnect" 
 Mongo.MongoClient.connect(databaseURL, { connectTimeoutMS: 8000 }, handleConnect);
