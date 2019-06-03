@@ -13,8 +13,8 @@ let db;
 let students;
 // running on heroku?
 if (process.env.NODE_ENV == "production") {
-    databaseURL = "mongodb+srv://LukasBlea:NSF6lSX7Wmvjt9t7@lukasblea-owo-b38vk.mongodb.net/Studentenanmeldung";
-    databaseName = "students";
+    databaseURL = "mongodb+srv://haendler1:haendler12345@pepsibank-id187.mongodb.net/";
+    databaseName = "test";
 }
 // try to connect to database, then activate callback "handleConnect" 
 Mongo.MongoClient.connect(databaseURL, { connectTimeoutMS: 8000 }, handleConnect);
@@ -55,7 +55,6 @@ function findAll(_callback) {
 }
 exports.findAll = findAll;
 function findStudentMatrikelnummer(_callback, _matrikelnummer) {
-    console.log("test");
     let cursor = students.find({ "martikel": _matrikelnummer });
     cursor.toArray(prepareAnswer);
     function prepareAnswer(_e, studentArray) {
