@@ -8,7 +8,7 @@ var DBClient;
         let searchButton = document.getElementById("search");
         let refreshButton = document.getElementById("refresh");
         insertButton.addEventListener("click", insert);
-        searchButton.addEventListener("click", searchNummer);
+        searchButton.addEventListener("click", search);
         refreshButton.addEventListener("click", refresh);
     }
     function insert(_event) {
@@ -20,16 +20,24 @@ var DBClient;
         console.log(query);
         sendRequest(query, handleInsertResponse);
     }
-    function searchNummer(_event) {
-        let input = document.getElementById("eingabematrikel");
-        let query = "command=suche";
-        query += "&search" + input.value;
-        console.log("Test Matrikelnummer search funktion");
+    //   function searchNummer(_event: Event): void {
+    //       let inputs: HTMLCollectionOf<HTMLInputElement> = document.getElementsByTagName("input");
+    //       let query: string = "command=suche";
+    //       query += "&matrikel=" + inputs[3].value;
+    //       console.log(query);
+    //       sendRequest(query, handleFindResponse);
+    //   }
+    function search(_event) {
+        let inputs = document.getElementsByTagName("input");
+        let query = "command=search";
+        query += "&matrikel=" + inputs[3].value;
+        console.log(query);
         sendRequest(query, handleFindResponse);
     }
     function refresh(_event) {
         let query = "command=refresh";
         sendRequest(query, handleFindResponse);
+        console.log("hi");
     }
     function sendRequest(_query, _callback) {
         let xhr = new XMLHttpRequest();
@@ -48,6 +56,8 @@ var DBClient;
         if (xhr.readyState == XMLHttpRequest.DONE) {
             let output = document.getElementsByTagName("textarea")[0];
             output.value = xhr.response;
+            //    let responseAsJson: JSON = JSON.parse(xhr.response);
+            //    console.log(responseAsJson);
         }
     }
 })(DBClient || (DBClient = {}));

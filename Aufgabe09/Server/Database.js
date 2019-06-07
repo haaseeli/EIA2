@@ -54,8 +54,8 @@ function findAll(_callback) {
     }
 }
 exports.findAll = findAll;
-function findStudentMatrikelnummer(_callback, _matrikelnummer) {
-    let cursor = students.find({ "martikel": _matrikelnummer });
+function findStudentMatrikelnummer(_callback, _matnumber) {
+    var cursor = students.find(_matnumber);
     cursor.toArray(prepareAnswer);
     function prepareAnswer(_e, studentArray) {
         if (_e) {

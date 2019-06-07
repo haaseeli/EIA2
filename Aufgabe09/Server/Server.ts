@@ -44,14 +44,16 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
         case "refresh":
             Database.findAll(findCallback);
             break;
-        case "suche":
-            let find: number = parseInt(query["search"]);
-            Database.findStudentMatrikelnummer(findCallback, find);
+        case "search":
+            let matnumber: MatrikelData = {
+                matrikel: parseInt(query["matrikel"])
+            };
+            console.log("hi");
+            Database.findStudentMatrikelnummer(findCallback, matnumber);
             break;
         default:
             respond(_response, "unknown command: " + command);
             break;
-
     }
 
     // findCallback is an inner function so that _response is in scope
@@ -67,3 +69,4 @@ function respond(_response: Http.ServerResponse, _text: string): void {
     _response.write(_text);
     _response.end();
 }
+
