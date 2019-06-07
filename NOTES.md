@@ -1,0 +1,5 @@
+# EIA2
+
+Aufgabe09
+command search??
+SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data???
