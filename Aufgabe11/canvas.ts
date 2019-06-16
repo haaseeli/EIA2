@@ -12,12 +12,13 @@ namespace Aufgabe11 {
 
 
     function init(): void {
-
+// tslint:disable-next-line: typedef
         let canvas = document.getElementsByTagName("canvas")[0];
+// tslint:disable-next-line: typedef
         let crc = canvas.getContext("2d");
+// tslint:disable-next-line: typedef
         let image = new Image();
-
-        image.src = "background.png";
+        image.src = "background1.png";
         
 
         canvas.width = window.innerWidth;

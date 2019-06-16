@@ -1,17 +1,21 @@
+
+
 namespace Aufgabe11 {
+
 
     export class Fish1 {
         x: number;
         y: number;
         dx: number;
         dy: number;
+        
 
         draw(): void {
             let fish: Path2D = new Path2D;
-            let flosseUnten: Path2D = new Path2D;
-            let auge: Path2D = new Path2D;
-            let pupile: Path2D = new Path2D;
-        
+            let dontfloss: Path2D = new Path2D;
+            let eye: Path2D = new Path2D;
+            let pupil: Path2D = new Path2D;
+            crc.strokeStyle = "ffffff";
         
             // POSITIONEN
             fish.moveTo(this.x, this.y);
@@ -20,30 +24,30 @@ namespace Aufgabe11 {
             fish.quadraticCurveTo(this.x + 250, this.y + 50, this.x + 300, this.y + 100);
             fish.quadraticCurveTo(this.x + 150, this.y - 20, this.x, this.y);
             
-            flosseUnten.moveTo(this.x + 100, this.y + 50);
-            flosseUnten.quadraticCurveTo(this.x + 50, this.y + 100, this.x + 50, this.y + 30);
+            dontfloss.moveTo(this.x + 100, this.y + 50);
+            dontfloss.quadraticCurveTo(this.x + 50, this.y + 100, this.x + 50, this.y + 30);
         
-            auge.arc(this.x + 20, this.y + 30, 10, 0, Math.PI * 2, false);
-            pupile.arc(this.x + 20, this.y + 30, 4, 0, Math.PI * 2, false);
+            eye.arc(this.x + 20, this.y + 30, 10, 0, Math.PI * 2, false);
+            pupil.arc(this.x + 20, this.y + 30, 4, 0, Math.PI * 2, false);
             
             // STYLE
             crc.fillStyle = "#dee5c9";
             crc.stroke(fish);
             crc.strokeStyle = "#f4e5c8";
             crc.fill(fish);
-        
+
             crc.fillStyle = "#f4e5c8";
             crc.strokeStyle = "#f4e5c8";
             crc.fillStyle = "#faffe2";
-            crc.fill(flosseUnten);
-            crc.stroke(flosseUnten);
+            crc.fill(dontfloss);
+            crc.stroke(dontfloss);
         
             crc.strokeStyle = "#d1b177";
-            crc.stroke(auge);
+            crc.stroke(eye);
         
             crc.fillStyle = "#d1b177";
-            crc.fill(pupile);
-            crc.stroke(pupile);
+            crc.fill(pupil);
+            crc.stroke(pupil);
 
         }
 

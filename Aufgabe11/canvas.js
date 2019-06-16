@@ -7,10 +7,13 @@ var Aufgabe11;
     let fps = 30;
     // let image: ImageData;
     function init() {
+        // tslint:disable-next-line: typedef
         let canvas = document.getElementsByTagName("canvas")[0];
+        // tslint:disable-next-line: typedef
         let crc = canvas.getContext("2d");
+        // tslint:disable-next-line: typedef
         let image = new Image();
-        image.src = "background.png";
+        image.src = "background1.png";
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
         crc.drawImage(image, canvas.width, canvas.height);
