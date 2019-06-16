@@ -5,6 +5,7 @@ namespace Aufgabe11 {
     let canvas: HTMLCanvasElement;
     let fishArray: Fish1[] = [];
     let bubblesArray: Bubbles[] = [];
+    let image = new Image();
 
     let fps: number = 30;
 
@@ -17,14 +18,15 @@ namespace Aufgabe11 {
 // tslint:disable-next-line: typedef
         crc = canvas.getContext("2d");
 // tslint:disable-next-line: typedef
-        let image = new Image();
         image.src = "background1.png";
+
+        crc.drawImage(image, 0, 0);
         
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        crc.drawImage(image, canvas.width, canvas.height);
+    //    crc.drawImage(image, canvas.width, canvas.height);
 
         for (let i: number = 0; i < 10; i++) {
             let x: number = Math.random() * canvas.width;
@@ -63,6 +65,7 @@ namespace Aufgabe11 {
     function update(): void {
         window.setTimeout(update, 1000 / fps);
         crc.clearRect(0, 0, canvas.width, canvas.height);
+        crc.drawImage(image, 0, 0, canvas.width, canvas.height);
 
         for (let i: number = 0; i < fishArray.length; i++) {
             fishArray[i].update();
