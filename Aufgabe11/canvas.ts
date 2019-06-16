@@ -5,9 +5,12 @@ namespace Aufgabe11 {
     let canvas: HTMLCanvasElement;
     let fishArray: Fish1[] = [];
     let bubblesArray: Bubbles[] = [];
+    let chantalArray: Einfacheinenkreiszeichnen[] = [];
+
+// tslint:disable-next-line: typedef
     let image = new Image();
 
-    let fps: number = 30;
+    let fps: number = 60; //brumm brumm, hier herrscht berufsverkehr
 
  
 
@@ -59,6 +62,21 @@ namespace Aufgabe11 {
             bubblesArray.push(bubbles);
             bubbles.draw();
         }
+
+        for (let i: number = 0; i < 6; i++) {
+            let x: number = Math.random() * canvas.width;
+            let y: number = Math.random() * 800;
+            let dx: number = -3;
+            let dy: number = Math.random() * -0.5;
+            let chantal: Einfacheinenkreiszeichnen;
+            chantal = new Einfacheinenkreiszeichnen();
+            chantal.x = x;
+            chantal.y = y;
+            chantal.dx = dx;
+            chantal.dy = dy;
+            chantalArray.push(chantal);
+            chantal.draw();
+        }
         update();
     }
 
@@ -72,6 +90,9 @@ namespace Aufgabe11 {
         }
         for (let i: number = 0; i < bubblesArray.length; i++) {
             bubblesArray[i].update();
+        }
+        for (let i: number = 0; i < chantalArray.length; i++) {
+            chantalArray[i].update();
         }
     }
 

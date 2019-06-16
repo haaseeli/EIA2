@@ -15,7 +15,7 @@ namespace Aufgabe11 {
             let dontfloss: Path2D = new Path2D;
             let eye: Path2D = new Path2D;
             let pupil: Path2D = new Path2D;
-            crc.strokeStyle = "ffffff";
+
         
             // POSITIONEN
             fish.moveTo(this.x, this.y);

@@ -4,8 +4,10 @@ var Aufgabe11;
     let canvas;
     let fishArray = [];
     let bubblesArray = [];
+    let chantalArray = [];
+    // tslint:disable-next-line: typedef
     let image = new Image();
-    let fps = 30;
+    let fps = 60; //brumm brumm, hier herrscht berufsverkehr
     function init() {
         // tslint:disable-next-line: typedef
         canvas = document.getElementsByTagName("canvas")[0];
@@ -47,6 +49,20 @@ var Aufgabe11;
             bubblesArray.push(bubbles);
             bubbles.draw();
         }
+        for (let i = 0; i < 6; i++) {
+            let x = Math.random() * canvas.width;
+            let y = Math.random() * 800;
+            let dx = -3;
+            let dy = Math.random() * -0.5;
+            let chantal;
+            chantal = new Aufgabe11.Einfacheinenkreiszeichnen();
+            chantal.x = x;
+            chantal.y = y;
+            chantal.dx = dx;
+            chantal.dy = dy;
+            chantalArray.push(chantal);
+            chantal.draw();
+        }
         update();
     }
     function update() {
@@ -58,6 +74,9 @@ var Aufgabe11;
         }
         for (let i = 0; i < bubblesArray.length; i++) {
             bubblesArray[i].update();
+        }
+        for (let i = 0; i < chantalArray.length; i++) {
+            chantalArray[i].update();
         }
     }
 })(Aufgabe11 || (Aufgabe11 = {}));

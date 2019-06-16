@@ -6,7 +6,6 @@ var Aufgabe11;
             let dontfloss = new Path2D;
             let eye = new Path2D;
             let pupil = new Path2D;
-            Aufgabe11.crc.strokeStyle = "ffffff";
             // POSITIONEN
             fish.moveTo(this.x, this.y);
             fish.quadraticCurveTo(this.x - 100, this.y + 100, this.x, this.y + 50);
