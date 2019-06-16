@@ -37,7 +37,7 @@ var Aufgabe11;
             let x = Math.random() * canvas.width;
             let y = Math.random() * 800;
             let dx = 15;
-            let dy = -15;
+            let dy = -5;
             let radius = Math.min(80) * Math.random();
             let bubbles;
             bubbles = new Aufgabe11.Bubbles();

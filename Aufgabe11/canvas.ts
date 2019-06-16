@@ -50,7 +50,7 @@ namespace Aufgabe11 {
             let x: number = Math.random() * canvas.width;
             let y: number = Math.random() * 800;
             let dx: number = 15;
-            let dy: number = -15;
+            let dy: number = -5;
             let radius: number = Math.min(80) * Math.random();
             let bubbles: Bubbles;
             bubbles = new Bubbles();

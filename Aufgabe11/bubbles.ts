@@ -25,8 +25,7 @@ namespace Aufgabe11 {
         move(): void {
             this.y += this.dy;
             if (this.y < 0)
-                this.y = window.innerHeight + 9;
+                this.y = window.innerHeight + 5;
         }
         }
     }
-}
