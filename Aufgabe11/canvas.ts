@@ -7,25 +7,20 @@ namespace Aufgabe11 {
     let bubblesArray: Bubbles[] = [];
 
     let fps: number = 30;
-    let imageData: ImageData;
-
-
-/*    function drawImage(): void {
-            canvas = document.getElementById();
-
+    let image: ImageData;
     }
-*/
+
 
     function init(): void {
-        canvas = document.getElementsByTagName("canvas")[0];
-        crc = canvas.getContext("2d");
+
+        let canvas = document.getElementsByTagName("canvas")[0];
+        let crc = canvas.getContext("2d");
         let image = document.getElementsByTagName("img");
-    
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        imageData = crc.drawImage(0, canvas.width, canvas.height);
+        crc.drawImage(0, canvas.width, canvas.height);
 
         for (let i: number = 0; i < 10; i++) {
             let x: number = Math.random() * canvas.width;
@@ -64,7 +59,6 @@ namespace Aufgabe11 {
     function update(): void {
         window.setTimeout(update, 1000 / fps);
         crc.clearRect(0, 0, canvas.width, canvas.height);
-        crc.putImageData(imageData, 0, 0);
 
         for (let i: number = 0; i < fishArray.length; i++) {
             fishArray[i].update();
