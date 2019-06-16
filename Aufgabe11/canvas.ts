@@ -7,20 +7,23 @@ namespace Aufgabe11 {
     let bubblesArray: Bubbles[] = [];
 
     let fps: number = 30;
-    let image: ImageData;
-    }
+   // let image: ImageData;
+ 
 
 
     function init(): void {
 
         let canvas = document.getElementsByTagName("canvas")[0];
         let crc = canvas.getContext("2d");
-        let image = document.getElementsByTagName("img");
+        let image = new Image();
+
+        image.src = "background.png";
+        
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        crc.drawImage(0, canvas.width, canvas.height);
+        crc.drawImage(image, canvas.width, canvas.height);
 
         for (let i: number = 0; i < 10; i++) {
             let x: number = Math.random() * canvas.width;
@@ -43,8 +46,8 @@ namespace Aufgabe11 {
             let dx: number = -5;
             let dy: number = Math.random() * -0.5;
             let radius: number = Math.min(80) * Math.random();
-            let bubbles: bubbles;
-            bubbles = new bubbles();
+            let bubbles: Bubbles;
+            bubbles = new Bubbles();
             bubbles.x = x;
             bubbles.y = y;
             bubbles.dx = dx;
@@ -67,5 +70,5 @@ namespace Aufgabe11 {
             bubblesArray[i].update();
         }
     }
-}
 
+}
