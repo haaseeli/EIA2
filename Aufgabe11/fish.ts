@@ -45,7 +45,7 @@ namespace Aufgabe11 {
             crc.strokeStyle = "#d1b177";
             crc.stroke(eye);
         
-            crc.fillStyle = "#d1b177";
+            crc.fillStyle = "#fff";
             crc.fill(pupil);
             crc.stroke(pupil);
 

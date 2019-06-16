@@ -10,7 +10,7 @@ namespace Aufgabe11 {
             let chantal: Path2D = new Path2D;
             
         //    chantal.beginPath();
-            chantal.moveTo(264 - this.x, 158 + this.y);
+            chantal.moveTo(0 - this.x, 0 + this.y);
 
             chantal.bezierCurveTo(264 - this.x, 158 + this.y, 348 - this.x, 106 + this.y, 357 - this.x, 161 + this.y);
             chantal.bezierCurveTo(366 - this.x, 217 + this.y, 286 - this.x, 191 + this.y, 278 - this.x, 175 + this.y);

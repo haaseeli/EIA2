@@ -28,7 +28,7 @@ var Aufgabe11;
             Aufgabe11.crc.stroke(dontfloss);
             Aufgabe11.crc.strokeStyle = "#d1b177";
             Aufgabe11.crc.stroke(eye);
-            Aufgabe11.crc.fillStyle = "#d1b177";
+            Aufgabe11.crc.fillStyle = "#fff";
             Aufgabe11.crc.fill(pupil);
             Aufgabe11.crc.stroke(pupil);
         }
