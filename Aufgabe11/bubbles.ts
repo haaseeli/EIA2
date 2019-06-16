@@ -23,14 +23,10 @@ namespace Aufgabe11 {
         }
 
         move(): void {
-            this.x += this.dx;
             this.y += this.dy;
-            if (this.x + this.radius > window.innerWidth || this.x - this.radius < 0) {
-                this.dx = -this.dx;
-            }
-            if (this.y + this.radius < window.innerHeight || this.y - this.radius < 0) {
-                this.dy = -this.dy;
-            }
+            if (this.y < 0)
+                this.y = window.innerHeight + 9;
+        }
         }
     }
 }

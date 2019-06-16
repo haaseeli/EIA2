@@ -49,8 +49,8 @@ namespace Aufgabe11 {
         for (let i: number = 0; i < 13; i++) {
             let x: number = Math.random() * canvas.width;
             let y: number = Math.random() * 800;
-            let dx: number = -5;
-            let dy: number = Math.random() * -0.5;
+            let dx: number = 15;
+            let dy: number = -15;
             let radius: number = Math.min(80) * Math.random();
             let bubbles: Bubbles;
             bubbles = new Bubbles();
@@ -66,7 +66,7 @@ namespace Aufgabe11 {
         for (let i: number = 0; i < 6; i++) {
             let x: number = Math.random() * canvas.width;
             let y: number = Math.random() * 800;
-            let dx: number = -3;
+            let dx: number = -15;
             let dy: number = Math.random() * -0.5;
             let chantal: Einfacheinenkreiszeichnen;
             chantal = new Einfacheinenkreiszeichnen();

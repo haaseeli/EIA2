@@ -36,8 +36,8 @@ var Aufgabe11;
         for (let i = 0; i < 13; i++) {
             let x = Math.random() * canvas.width;
             let y = Math.random() * 800;
-            let dx = -5;
-            let dy = Math.random() * -0.5;
+            let dx = 15;
+            let dy = -15;
             let radius = Math.min(80) * Math.random();
             let bubbles;
             bubbles = new Aufgabe11.Bubbles();
@@ -52,7 +52,7 @@ var Aufgabe11;
         for (let i = 0; i < 6; i++) {
             let x = Math.random() * canvas.width;
             let y = Math.random() * 800;
-            let dx = -3;
+            let dx = -15;
             let dy = Math.random() * -0.5;
             let chantal;
             chantal = new Aufgabe11.Einfacheinenkreiszeichnen();
