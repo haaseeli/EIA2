@@ -5,18 +5,17 @@ var Aufgabe11;
     let fishArray = [];
     let bubblesArray = [];
     let fps = 30;
-    // let image: ImageData;
     function init() {
         // tslint:disable-next-line: typedef
-        let canvas = document.getElementsByTagName("canvas")[0];
+        canvas = document.getElementsByTagName("canvas")[0];
         // tslint:disable-next-line: typedef
-        let crc = canvas.getContext("2d");
+        Aufgabe11.crc = canvas.getContext("2d");
         // tslint:disable-next-line: typedef
         let image = new Image();
         image.src = "background1.png";
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        crc.drawImage(image, canvas.width, canvas.height);
+        Aufgabe11.crc.drawImage(image, canvas.width, canvas.height);
         for (let i = 0; i < 10; i++) {
             let x = Math.random() * canvas.width;
             let y = Math.random() * 700;

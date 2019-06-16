@@ -7,15 +7,15 @@ namespace Aufgabe11 {
     let bubblesArray: Bubbles[] = [];
 
     let fps: number = 30;
-   // let image: ImageData;
+
  
 
 
     function init(): void {
 // tslint:disable-next-line: typedef
-        let canvas = document.getElementsByTagName("canvas")[0];
+        canvas = document.getElementsByTagName("canvas")[0];
 // tslint:disable-next-line: typedef
-        let crc = canvas.getContext("2d");
+        crc = canvas.getContext("2d");
 // tslint:disable-next-line: typedef
         let image = new Image();
         image.src = "background1.png";
