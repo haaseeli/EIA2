@@ -34,7 +34,7 @@ namespace Aufgabe11 {
         for (let i: number = 0; i < 10; i++) {
             let x: number = Math.random() * canvas.width;
             let y: number = Math.random() * 700;
-            let dx: number = -4 + -2;
+            let dx: number = -6;
             let dy: number = Math.random() * -1;
             let fish1: Fish1;
             fish1 = new Fish1();
@@ -65,8 +65,8 @@ namespace Aufgabe11 {
 
         for (let i: number = 0; i < 6; i++) {
             let x: number = Math.random() * canvas.width;
-            let y: number = Math.random() * 800;
-            let dx: number = -15;
+            let y: number = Math.random() * 1000;
+            let dx: number = -6;
             let dy: number = Math.random() * -0.5;
             let chantal: Einfacheinenkreiszeichnen;
             chantal = new Einfacheinenkreiszeichnen();

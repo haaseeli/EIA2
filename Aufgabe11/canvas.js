@@ -22,7 +22,7 @@ var Aufgabe11;
         for (let i = 0; i < 10; i++) {
             let x = Math.random() * canvas.width;
             let y = Math.random() * 700;
-            let dx = -4 + -2;
+            let dx = -6;
             let dy = Math.random() * -1;
             let fish1;
             fish1 = new Aufgabe11.Fish1();
@@ -51,8 +51,8 @@ var Aufgabe11;
         }
         for (let i = 0; i < 6; i++) {
             let x = Math.random() * canvas.width;
-            let y = Math.random() * 800;
-            let dx = -15;
+            let y = Math.random() * 1000;
+            let dx = -6;
             let dy = Math.random() * -0.5;
             let chantal;
             chantal = new Aufgabe11.Einfacheinenkreiszeichnen();
